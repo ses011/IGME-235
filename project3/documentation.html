@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Documentation</h1>
+    <p>This is inspired by a table top game that I've played for years, Q-Bitz. It's a puzzle game that uses dice as the puzzle pices, and usually is played race-style against up to 3 other players. 
+        This online version is a lot more casual than how my family plays it, but it has the base mechanics nonetheless. Each dice is an instance of the Dice class, which holds information about which 
+        face is visible and which HTML element it refers to. When a dice is double clicked, it cycles through to the next value of a faces object literal being used like an enumerated type. There's another 
+        object literal list of length 16 arrays that hold a collection of patterns. When the page is (re)loaded it randomly picks a pattern. <br>
+        When a dice is moved the code checks if it is in a tray position, and gives it the value of said position. It then checks each position in the tray to see if it's full and the dice in that position 
+        matches what should be there on the pattern. Adding more patterns is very easy which is good if I decide to expand on this, and it also has the potental for randomly-generated patterns as well. I definitely started with the code then slowly designed visually from there. Honestly getting the CSS to look not-terrible 
+        was the hardest part. It still doens't look great but it's not bad. Snapping into place wasn't bad once I found the method to get the pixel position of an HTML element, sound and tutorial took me a half hour 
+        combined, and I was able to use the patterns from the game cards I own as inspiration (I copied them) so all I had to do was create the individual dice face images in color and black and white. I originally 
+        had the double click randomly display a face, as if you were rolling the dice, but after critique day having it cycle through the patterns was the top suggestion so I changed it. I also didn't get it to work on mobile, but it works well on multiple sizes of desktop browsers.<br>
+        I wish the sound only played when the user drags and drops, rather than playing twice on double click, but I couldn't figure that out.
+    </p>
+
+    <br><br>
+    <h2>References/Sources</h2>
+    <p><a href="https://boardgamegeek.com/boardgame/66088/qbitz">All of the patterns are copied from Q-Bitz</a><br>
+    <a href="https://stackoverflow.com/questions/9907419/how-to-get-a-key-in-a-javascript-object-by-its-value">Reverse object literal search</a><br>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event">Double click event</a><br>
+    <a href="https://stackoverflow.com/questions/442404/retrieve-the-position-x-y-of-an-html-element">Pixel position of an element</a><br>
+    <a href="https://icons8.com/icons/set/question-mark--white">Question Mark</a>
+    <a href="https://stackoverflow.com/questions/4068373/center-a-popup-window-on-screen">Popup for tutorial</a>
+    <a href="https://freesound.org/people/Jagadamba/sounds/219158/">Sound effect</a><br>
+
+    </p>
+</body>
+</html>
+
+

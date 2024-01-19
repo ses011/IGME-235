@@ -1,0 +1,79 @@
+body { 
+    background-color: #103D44;
+    color:aliceblue;
+    font-weight: 100;
+    font-family: 'Titillium Web', sans-serif;
+
+    & h1 {
+        text-align: center;
+        font-size: 150px;
+        margin-top: 10px;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    & #main {
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+
+        & h3 {
+            font-size: 40px;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+
+    }
+    
+    & #inputs {
+        margin-left: 10vw;
+        font-size: 30px;
+        margin-right: 5vw;
+
+        & #searchcount {
+            width: 25vw;
+            height: 35px;
+            font-size: 25px;
+        }
+    
+        & #categories, #type{
+            width: 25vw;
+            height: 35px;
+            font-size: 25px;
+        }
+        
+        & #submit {
+            height: 30px;
+            font-size: 20px;
+            background-color: gray;
+        }
+    }
+
+    & #output {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5vw;
+        margin-right: 10vw;
+    
+        & .prompt {
+            border: 1px solid;
+            padding: 4px;
+
+        }
+
+        & .incorrect:checked+.label {
+            color: #ff0000;
+        }
+        
+        & .correct:checked+.label {
+            color: #adff2f;
+        }
+    }
+
+    & footer {
+        margin-bottom: 5px;
+        
+        & a:link, a:visited, a:hover, a:active {
+            color: white;
+        }
+    }
+}

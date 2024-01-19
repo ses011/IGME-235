@@ -1,0 +1,74 @@
+body {
+    background-color: #103D44;
+    color: white;
+}
+#content {
+    width: 100vw;
+}
+#tutorial {
+    & button {
+        background-color: #103D44;
+        height: 75px;
+        width: 75px;
+        margin-left: 93vw;
+        margin-right: 5px;
+
+        & img {
+            height: 65px;
+            width: 65px;
+        }
+    }
+}
+#prompt {
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(4, 8vh);;
+    grid-template-rows: repeat(4, 8vh);
+    margin-left: 5vw;
+
+    & img {
+        position: relative;
+        width: 8vh;
+        height: 8vh;
+    }
+}
+
+#tray {
+    display: grid;
+    margin: 10px;
+    grid-template-columns: repeat(4, calc(10vh + 5px));
+    grid-template-rows: repeat(4, calc(10vh + 5px));
+    & img {
+        position: relative;
+        border: solid black 5px;
+        width: calc(10vh + 5px);
+        height: calc(10vh + 5px);
+    }
+}
+
+#dice {
+    cursor: move;
+    
+    & img {
+        width: 10vh;
+        height: 10vh;
+        position: absolute;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    color: white;
+    & #doc {
+        right: 20px;
+    }
+}
+
+a:link, a:hover, a:active, a:visited {
+    color: white;
+}
+
+#info {
+    font-size: 30px;
+}

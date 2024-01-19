@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web" rel="stylesheet">
+</head>
+<body>
+    <h1>TRIVIA<br></h1>
+
+    <div id="main">
+        <div id="inputs">
+            <h3>Number of questions</h3>
+            <input id="searchcount" type="text" maxlength="3" />
+
+            <h3>Category</h3>
+            <select id="categories">
+                <option value="cany">Any Category</option>
+                <option value="21">Sports</option>
+                <option value="25">Art</option>
+                <option value="15">Video Games</option>
+                <option value="16">Board Games</option>
+            </select>
+
+            <h3>Question type</h3>
+            <select id="type">
+                <option value="tany">Any Type</option>
+                <option value="boolean">True/False</option>
+                <option value="multiple">Multiple Choice</option>
+            </select>
+
+            <br>
+            <button type="button" id="submit">Get questions<br /></button>
+
+        </div>
+
+        <div id="output">
+            <h3>Questions</h3>
+            <div id="questions">
+
+            </div>
+        </div>
+
+    </div>
+    
+    <footer><a href="documentation.html">Documentation</a> </footer>
+</body>
+</html>

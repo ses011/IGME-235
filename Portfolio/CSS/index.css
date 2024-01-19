@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    > .content {
+        display: grid;
+        background-color: #103D44;
+        color: aliceblue;
+        font-family: Verdana, Tahoma, sans-serif;
+
+        grid-template-columns: auto;
+        grid-template-rows: 4vh 4vh 50vh 30vh auto;    
+        grid-template-areas: "header" "title" "carousel" "info" "projects";
+        
+        
+        > .head {
+            grid-area: header;
+            
+            background-color: #6B9080;
+            color: white;
+
+        }
+
+        > h1 {
+            text-align: center;
+            margin-top: 5px;
+            grid-area: title;
+            font-size: 3vh
+        }
+
+        @media screen and (min-width: 1250px) {
+            grid-template-columns: 25vw auto 25vw;
+            grid-template-rows: 7vh 7vh 70vh 30vh auto;
+            grid-template-areas:    "header header header"
+                                    "side title empty"
+                                    "side carousel empty"
+                                    "side info empty"
+                                    "side projects empty";    
+            
+            > .head {
+                > h2 {
+                    display: inline-block;
+                    margin-left: 50px;
+                }
+                > a {
+                    margin-left: 30px;
+                }
+            }
+            > h1 {
+                font-size: 6vh
+            }
+        }
+
+        > .carousel {
+            grid-area: carousel;
+            margin-top: 4vh;
+            margin: 2em 10%;
+
+            > .slider {
+                overflow: hidden;
+                text-align: center;
+                width: 50vw;
+
+                > .images {
+                    display: flex;
+                    flex-direction: row;
+                    
+                    overflow-x: auto;
+                    scroll-snap-type: x mandatory;
+
+                    scroll-behavior: smooth;
+                    -webkit-overflow-scrolling: touch;
+    
+                    > div {
+                        display: flex;
+
+                        scroll-snap-align: start;
+                        flex-shrink: 0;
+                        width: 50vw;
+                        transform: scale(1);
+                    }
+
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                        height: 10px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background: black;
+                        border-radius: 10px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background: transparent;
+                    }
+                }
+
+                > a {
+                    display: inline-flex;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    margin: 0 0 0.5rem 0;
+                    position: relative;
+                }  
+              }
+            }
+
+        
+        @media screen and (min-width: 850px){
+            > .carousel {
+                grid-area: carousel;
+                margin: 20px auto;
+                overflow: hidden;
+
+                .title {
+                    position: absolute;
+                    z-index: 100;
+                    color: #103D44;
+                    bottom: 20px;
+                    left: 40px;
+
+                }
+                img {
+                    width: 50vw;
+                    position: relative;
+                }
+            }
+        }
+
+        > .info {
+            grid-area: info;
+            font-size: 2.5vh;
+            font-weight: 100;
+        }
+
+        @media screen and (min-width: 1000px) {
+            > .info {
+                column-count: 2;
+                column-gap: 30px;
+            }
+        }
+
+        > .projects{
+            grid-area: projects;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+            
+            .pLeft{
+                > img {
+                    padding: 10px;
+                    width: 20vw;
+                    float: left;
+                }
+                h2 {
+                    padding: 10px;
+                    font-size: 3vh;
+                    text-decoration: underline;
+                }
+                p {
+                    padding: 10px;
+                    font-size: 2vh;
+                }
+            }
+
+            .pRight {
+                padding: 10px;
+                > img {
+                    padding: 10px;
+                    width: 20vw;
+                    float: right;
+                }
+                h2 {
+                    padding: 10px;
+                    font-size: 3vh;
+                    text-decoration: underline;
+                }
+                p {
+                    padding: 10px;
+                    font-size: 2vh;
+                }
+            }
+
+
+        }
+    }
+    
+}
+
+
+a:link {
+    color: aliceblue;
+    font-style: normal;
+}
+a:visited {
+    color: aliceblue;
+}
+a:focus {
+    color: aliceblue;
+}
+a:hover {
+    color: aliceblue;
+}
+a:active {
+    color: aliceblue;
+}
